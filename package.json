@@ -1,0 +1,15 @@
+{
+  "name": "danielecomoglio-site",
+  "private": true,
+  "scripts": {
+    "visual:reference": "BACKSTOP_BASE_URL=https://danielecomoglio.com backstop reference --config=backstop.config.cjs",
+    "visual:test:staging": "BACKSTOP_BASE_URL=https://danielecomoglio-staging.ragaihub.com backstop test --config=backstop.config.cjs",
+    "visual:approve": "backstop approve --config=backstop.config.cjs",
+    "screenshots:live": "PLAYWRIGHT_BASE_URL=https://danielecomoglio.com node scripts/capture-screenshots.mjs",
+    "screenshots:staging": "PLAYWRIGHT_BASE_URL=https://danielecomoglio-staging.ragaihub.com node scripts/capture-screenshots.mjs"
+  },
+  "devDependencies": {
+    "backstopjs": "^6.3.25",
+    "playwright": "^1.53.0"
+  }
+}
