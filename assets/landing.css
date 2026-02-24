@@ -39,7 +39,7 @@ body.popup-open {
 }
 
 section[id] {
-  scroll-margin-top: 96px;
+  scroll-margin-top: 136px;
 }
 
 .skip-link {
@@ -234,8 +234,8 @@ body.menu-open .menu-icon::after {
   gap: 8px;
   padding: 112px 26px 42px;
   border: 0;
-  background: rgba(249, 248, 244, 0.84);
-  backdrop-filter: blur(8px);
+  background: rgba(249, 248, 244, 0.96);
+  backdrop-filter: blur(3px);
 }
 
 .mobile-menu a {
@@ -282,6 +282,10 @@ body.menu-open .menu-icon::after {
   z-index: 1;
 }
 
+.hero.section {
+  padding-top: 56px;
+}
+
 .hero-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -294,6 +298,11 @@ body.menu-open .menu-icon::after {
   height: auto;
   border-radius: 20px;
   box-shadow: var(--shadow);
+}
+
+.hero-media {
+  max-width: 520px;
+  justify-self: center;
 }
 
 .hero-copy {
@@ -567,6 +576,14 @@ body.menu-open .menu-icon::after {
   border-radius: 20px;
 }
 
+.tour-widget {
+  margin: 14px 0 12px;
+}
+
+.tour-widget .bit-widget {
+  font-family: "Literata", Georgia, serif;
+}
+
 .section-press {
   background: rgba(250, 249, 246, 0.74);
 }
@@ -760,11 +777,6 @@ textarea:focus {
   margin-top: 14px;
 }
 
-.newsletter-popup-link {
-  width: 100%;
-  margin-top: 8px;
-}
-
 .back-to-top {
   position: fixed;
   right: 18px;
@@ -893,8 +905,8 @@ textarea:focus {
   }
 
   .hero-grid {
-    grid-template-columns: minmax(360px, 1fr) minmax(420px, 1fr);
-    gap: 42px;
+    grid-template-columns: minmax(300px, 0.9fr) minmax(480px, 1.1fr);
+    gap: 36px;
   }
 
   .collab-grid {
