@@ -8,8 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;700&family=Literata:opsz,wght@7..72,400;7..72,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/landing.css?v=20260224-3">
-  <script defer src="assets/landing.js?v=20260224-3"></script>
+  <link rel="stylesheet" href="assets/landing.css?v=20260224-4">
+  <script defer src="assets/landing.js?v=20260224-4"></script>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -18,24 +18,35 @@
     <div class="header-inner">
       <a class="brand" href="#home">DANIELE COMOGLIO</a>
 
+      <nav class="desktop-nav" aria-label="Primary">
+        <a href="#home">Home</a>
+        <a href="#biografia">Biography</a>
+        <a href="#discografia">Discography</a>
+        <a href="#collaborazioni">Collaborations</a>
+        <a href="#media">Media</a>
+        <a href="#tour">Tour</a>
+        <a href="#press">Press</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
         <span class="menu-icon" aria-hidden="true"></span>
       </button>
     </div>
-
-    <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile" hidden>
-      <a href="#home">Home</a>
-      <a href="#biografia">Biography</a>
-      <a href="#discografia">Discography</a>
-      <a href="#collaborazioni">Collaborations</a>
-      <a href="#media">Media</a>
-      <a href="#recording">Sax Recording</a>
-      <a href="#tour">Tour</a>
-      <a href="#press">Press</a>
-      <a href="#contact">Contact</a>
-      <a href="#newsletter">Newsletter</a>
-    </nav>
   </header>
+
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile" hidden>
+    <a href="#home">Home</a>
+    <a href="#biografia">Biography</a>
+    <a href="#discografia">Discography</a>
+    <a href="#collaborazioni">Collaborations</a>
+    <a href="#media">Media</a>
+    <a href="#recording">Sax Recording</a>
+    <a href="#tour">Tour</a>
+    <a href="#press">Press</a>
+    <a href="#contact">Contact</a>
+    <a href="#newsletter">Newsletter</a>
+  </nav>
 
   <button class="menu-overlay" type="button" aria-label="Close menu" hidden></button>
 
@@ -43,7 +54,7 @@
     <section class="hero section" id="home">
       <div class="container hero-grid">
         <div class="hero-media">
-          <img src="assets/photos/daniele-subway-seat.webp" alt="Daniele Comoglio on a New York subway train with his saxophone case" fetchpriority="high" width="1800" height="1198">
+          <img src="wp-content/uploads/2020/12/DSC6392-127dp-Copia.jpg" alt="Daniele Comoglio with saxophone" fetchpriority="high" width="719" height="1080">
         </div>
         <div class="hero-copy">
           <p class="eyebrow">Saxophonist, session player, teacher</p>
@@ -328,7 +339,6 @@
     <div class="container footer-grid">
       <div>
         <a class="brand" href="#home">DANIELE COMOGLIO</a>
-        <p>Tenor and soprano saxophone</p>
       </div>
 
       <div class="social-links" aria-label="Social links">
@@ -346,6 +356,28 @@
     <p class="footer-note">Copyright 2026 Daniele Comoglio. All rights reserved.</p>
   </footer>
 
-  <button class="back-to-top" type="button" aria-label="Back to top">Top</button>
+  <aside class="newsletter-popup" id="newsletter-popup" role="dialog" aria-modal="true" aria-labelledby="newsletter-popup-title" hidden>
+    <div class="newsletter-popup-panel">
+      <button class="newsletter-popup-close" type="button" aria-label="Close newsletter popup">&#10005;</button>
+      <p class="eyebrow">Newsletter</p>
+      <h2 id="newsletter-popup-title">Get New Releases First</h2>
+      <p>Join the newsletter to receive updates about concerts, releases and new videos.</p>
+      <form id="newsletter-popup-form" class="newsletter-popup-form" novalidate>
+        <label class="visually-hidden" for="newsletter-popup-email">Email</label>
+        <input id="newsletter-popup-email" type="email" name="email" placeholder="Your email" required>
+        <button class="btn" type="submit">Subscribe</button>
+      </form>
+      <p class="form-status" id="newsletter-popup-status" aria-live="polite"></p>
+      <a class="btn btn-light newsletter-popup-link" href="#newsletter">Open Newsletter Section</a>
+    </div>
+  </aside>
+
+  <button class="back-to-top" type="button" aria-label="Back to top">
+    <svg class="back-to-top-ring" viewBox="0 0 52 52" aria-hidden="true">
+      <circle class="ring-track" cx="26" cy="26" r="21"></circle>
+      <circle class="ring-progress" cx="26" cy="26" r="21"></circle>
+    </svg>
+    <span class="back-to-top-arrow" aria-hidden="true">&#8593;</span>
+  </button>
 </body>
 </html>
