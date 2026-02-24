@@ -19,12 +19,25 @@
     'dipi-anim-preload'
   ];
 
+  var followUpCleanupScheduled = false;
+
   function stripLegacyState() {
-    if (!document.body) return;
+    if (!document.body) return false;
+    var changed = false;
+
     LEGACY_BODY_CLASSES.forEach(function (cls) {
-      document.body.classList.remove(cls);
+      if (document.body.classList.contains(cls)) {
+        document.body.classList.remove(cls);
+        changed = true;
+      }
     });
-    document.documentElement.classList.add('loftloader-pro-hide');
+
+    if (!document.documentElement.classList.contains('loftloader-pro-hide')) {
+      document.documentElement.classList.add('loftloader-pro-hide');
+      changed = true;
+    }
+
+    return changed;
   }
 
   function removeLoaderMarkup() {
@@ -37,8 +50,10 @@
   function improveMobileMenuUX() {
     var mobileTrigger = document.querySelector('.et_mobile_nav_menu .mobile_nav');
     if (!mobileTrigger) return;
+    if (mobileTrigger.getAttribute('data-dc-enhanced') === '1') return;
 
     mobileTrigger.setAttribute('aria-label', 'Toggle navigation menu');
+    mobileTrigger.setAttribute('data-dc-enhanced', '1');
 
     document.querySelectorAll('.et_mobile_menu a').forEach(function (link) {
       link.addEventListener('click', function () {
@@ -48,25 +63,32 @@
     });
   }
 
-  document.addEventListener('DOMContentLoaded', function () {
+  function runLegacyCleanup() {
     removeLoaderMarkup();
     stripLegacyState();
-    improveMobileMenuUX();
 
-    var observer = new MutationObserver(function () {
+    // Run only a couple of delayed passes to catch late class injections
+    // without keeping a long-lived MutationObserver active.
+    if (followUpCleanupScheduled) return;
+    followUpCleanupScheduled = true;
+
+    window.setTimeout(function () {
+      removeLoaderMarkup();
       stripLegacyState();
-    });
+    }, 350);
 
-    if (document.body) {
-      observer.observe(document.body, {
-        attributes: true,
-        attributeFilter: ['class']
-      });
-    }
+    window.setTimeout(function () {
+      removeLoaderMarkup();
+      stripLegacyState();
+    }, 1600);
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    runLegacyCleanup();
+    improveMobileMenuUX();
   });
 
   window.addEventListener('load', function () {
-    removeLoaderMarkup();
-    stripLegacyState();
+    runLegacyCleanup();
   });
 })();
