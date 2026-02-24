@@ -11,7 +11,6 @@
   var desktopMenuQuery = window.matchMedia('(min-width: 1040px)');
   var newsletterPopup = document.getElementById('newsletter-popup');
   var newsletterPopupClose = document.querySelector('.newsletter-popup-close');
-  var newsletterPopupLink = document.querySelector('.newsletter-popup-link');
   var newsletterPopupForm = document.getElementById('newsletter-popup-form');
   var newsletterPopupStatus = document.getElementById('newsletter-popup-status');
   var popupSeenKey = 'dc_newsletter_prompt_seen';
@@ -164,12 +163,8 @@
     });
   }
 
-  if (newsletterPopup && newsletterPopupClose && newsletterPopupLink) {
+  if (newsletterPopup && newsletterPopupClose) {
     newsletterPopupClose.addEventListener('click', function () {
-      closePopup(true);
-    });
-
-    newsletterPopupLink.addEventListener('click', function () {
       closePopup(true);
     });
 
