@@ -8,8 +8,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;700&family=Literata:opsz,wght@7..72,400;7..72,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/landing.css?v=20260224-7">
-  <script defer src="assets/landing.js?v=20260224-7"></script>
+  <link rel="stylesheet" href="assets/landing.css?v=20260224-9">
+  <script defer src="assets/landing.js?v=20260224-9"></script>
+  <script defer src="assets/cmp.js?v=20260224-9"></script>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -218,27 +219,57 @@
         <h2>Video Selection</h2>
         <div class="video-grid">
           <article class="video-card">
-            <iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/9SY_vKI5gbI" title="MOLECADA" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="blocked-embed" data-embed-provider="youtube" data-src="https://www.youtube-nocookie.com/embed/9SY_vKI5gbI" data-title="MOLECADA">
+              <div class="blocked-embed-inner">
+                <p>This video is blocked until you accept media cookies.</p>
+                <button class="btn btn-light" type="button" data-consent-open>Review Cookie Choices</button>
+              </div>
+            </div>
             <p>MOLECADA</p>
           </article>
           <article class="video-card">
-            <iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/FhhlaWnqt9M" title="JULYE" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="blocked-embed" data-embed-provider="youtube" data-src="https://www.youtube-nocookie.com/embed/FhhlaWnqt9M" data-title="JULYE">
+              <div class="blocked-embed-inner">
+                <p>This video is blocked until you accept media cookies.</p>
+                <button class="btn btn-light" type="button" data-consent-open>Review Cookie Choices</button>
+              </div>
+            </div>
             <p>JULYE</p>
           </article>
           <article class="video-card">
-            <iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/y7nI8J0dCDw" title="No Ceu No Mar Na Terra" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="blocked-embed" data-embed-provider="youtube" data-src="https://www.youtube-nocookie.com/embed/y7nI8J0dCDw" data-title="No Ceu No Mar Na Terra">
+              <div class="blocked-embed-inner">
+                <p>This video is blocked until you accept media cookies.</p>
+                <button class="btn btn-light" type="button" data-consent-open>Review Cookie Choices</button>
+              </div>
+            </div>
             <p>No Ceu No Mar Na Terra</p>
           </article>
           <article class="video-card">
-            <iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/hVyvF-K65-A" title="Back To My Soul" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="blocked-embed" data-embed-provider="youtube" data-src="https://www.youtube-nocookie.com/embed/hVyvF-K65-A" data-title="Back To My Soul">
+              <div class="blocked-embed-inner">
+                <p>This video is blocked until you accept media cookies.</p>
+                <button class="btn btn-light" type="button" data-consent-open>Review Cookie Choices</button>
+              </div>
+            </div>
             <p>Back To My Soul</p>
           </article>
           <article class="video-card">
-            <iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/HnYNjzVNdhk" title="Black Velvet" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="blocked-embed" data-embed-provider="youtube" data-src="https://www.youtube-nocookie.com/embed/HnYNjzVNdhk" data-title="Black Velvet">
+              <div class="blocked-embed-inner">
+                <p>This video is blocked until you accept media cookies.</p>
+                <button class="btn btn-light" type="button" data-consent-open>Review Cookie Choices</button>
+              </div>
+            </div>
             <p>Black Velvet</p>
           </article>
           <article class="video-card">
-            <iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/IOVdbMVE-1c" title="Blues Connotation" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="blocked-embed" data-embed-provider="youtube" data-src="https://www.youtube-nocookie.com/embed/IOVdbMVE-1c" data-title="Blues Connotation">
+              <div class="blocked-embed-inner">
+                <p>This video is blocked until you accept media cookies.</p>
+                <button class="btn btn-light" type="button" data-consent-open>Review Cookie Choices</button>
+              </div>
+            </div>
             <p>Blues Connotation</p>
           </article>
         </div>
@@ -254,22 +285,28 @@
           <p class="eyebrow">Tour Dates</p>
           <h2>Live Schedule</h2>
           <p>Older dates are now archived. Upcoming concert dates are powered by Bandsintown so they can be managed independently.</p>
-          <div class="tour-widget" id="tour-widget">
-            <a class="bit-widget-initializer"
-              data-artist-name="Daniele Comoglio"
-              data-background-color="rgba(250,249,246,0.9)"
-              data-separator-color="rgba(33,33,31,0.16)"
-              data-text-color="#21211f"
-              data-font="Barlow Condensed"
-              data-auto-style="false"
-              data-display-local-dates="true"
-              data-display-past-dates="false"
-              data-display-details="false"
-              data-display-lineup="false"
-              data-display-start-time="true"
-              data-link-color="#a6832f"
-              data-language="en">
-            </a>
+          <div class="tour-widget blocked-embed blocked-widget" id="tour-widget">
+            <div class="blocked-embed-inner">
+              <p>Tour widget is blocked until you accept media cookies.</p>
+              <button class="btn btn-light" type="button" data-consent-open>Review Cookie Choices</button>
+            </div>
+            <template id="tour-widget-template">
+              <a class="bit-widget-initializer"
+                data-artist-name="Daniele Comoglio"
+                data-background-color="rgba(250,249,246,0.9)"
+                data-separator-color="rgba(33,33,31,0.16)"
+                data-text-color="#21211f"
+                data-font="Barlow Condensed"
+                data-auto-style="false"
+                data-display-local-dates="true"
+                data-display-past-dates="false"
+                data-display-details="false"
+                data-display-lineup="false"
+                data-display-start-time="true"
+                data-link-color="#a6832f"
+                data-language="en">
+              </a>
+            </template>
           </div>
           <a class="btn" href="https://www.bandsintown.com" target="_blank" rel="noopener">Bandintown Integration Ready</a>
         </div>
@@ -368,7 +405,8 @@
       <div class="legal-links" aria-label="Legal links">
         <a href="privacy-policy/">Privacy Policy</a>
         <a href="terms-of-use/">Terms Of Use</a>
-        <a href="dmca/">DMCA</a>
+        <a href="cookie-policy/">Cookie Policy</a>
+        <button class="link-button" type="button" data-consent-open>Review Cookie Choices</button>
       </div>
     </div>
     <p class="footer-note">Copyright 2026 Daniele Comoglio. All rights reserved.</p>
@@ -390,12 +428,47 @@
   </aside>
 
   <button class="back-to-top" type="button" aria-label="Back to top">
-    <svg class="back-to-top-ring" viewBox="0 0 52 52" aria-hidden="true">
-      <circle class="ring-track" cx="26" cy="26" r="21"></circle>
-      <circle class="ring-progress" cx="26" cy="26" r="21"></circle>
+    <svg class="back-to-top-ring" viewBox="0 0 58 58" aria-hidden="true">
+      <circle class="ring-track" cx="29" cy="29" r="25"></circle>
+      <circle class="ring-progress" cx="29" cy="29" r="25"></circle>
     </svg>
     <span class="back-to-top-arrow" aria-hidden="true">&#8593;</span>
   </button>
-  <script async defer src="https://widgetv3.bandsintown.com/main.min.js"></script>
+
+  <aside class="cmp-banner" id="cmp-banner" role="dialog" aria-modal="true" aria-labelledby="cmp-title" hidden>
+    <div class="cmp-panel">
+      <p class="eyebrow">Cookies</p>
+      <h2 id="cmp-title">Cookie Settings</h2>
+      <p>We only load external media (YouTube and Bandsintown) after your consent. You can change this anytime.</p>
+      <div class="cmp-actions">
+        <button class="btn" type="button" id="cmp-accept-all">Accept All</button>
+        <button class="btn btn-light" type="button" id="cmp-reject-all">Reject Non-Essential</button>
+        <button class="btn btn-light" type="button" id="cmp-open-preferences">Customize</button>
+      </div>
+    </div>
+  </aside>
+
+  <aside class="cmp-modal" id="cmp-modal" role="dialog" aria-modal="true" aria-labelledby="cmp-modal-title" hidden>
+    <div class="cmp-modal-panel">
+      <button class="newsletter-popup-close cmp-close" type="button" aria-label="Close cookie preferences" id="cmp-close">&#10005;</button>
+      <p class="eyebrow">Cookie Preferences</p>
+      <h2 id="cmp-modal-title">Manage Cookie Choices</h2>
+      <form id="cmp-form" class="cmp-form">
+        <label class="cmp-row">
+          <input type="checkbox" checked disabled>
+          <span><strong>Necessary cookies</strong><br>Required for core site features and preference storage.</span>
+        </label>
+        <label class="cmp-row">
+          <input type="checkbox" id="cmp-media-consent">
+          <span><strong>External media</strong><br>Allows loading YouTube embeds and Bandsintown tour widget.</span>
+        </label>
+        <div class="cmp-actions">
+          <button class="btn" type="submit">Save Preferences</button>
+          <button class="btn btn-light" type="button" id="cmp-modal-accept-all">Accept All</button>
+          <button class="btn btn-light" type="button" id="cmp-modal-reject-all">Reject Non-Essential</button>
+        </div>
+      </form>
+    </div>
+  </aside>
 </body>
 </html>
