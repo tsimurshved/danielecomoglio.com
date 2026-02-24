@@ -39,7 +39,7 @@ body.popup-open {
 }
 
 section[id] {
-  scroll-margin-top: 136px;
+  scroll-margin-top: 16px;
 }
 
 .skip-link {
@@ -301,8 +301,8 @@ body.menu-open .menu-icon::after {
 }
 
 .hero-media {
-  max-width: 460px;
-  justify-self: center;
+  max-width: 320px;
+  justify-self: start;
 }
 
 .hero-copy {
@@ -905,7 +905,7 @@ textarea:focus {
   }
 
   .hero-grid {
-    grid-template-columns: minmax(260px, 0.78fr) minmax(520px, 1.22fr);
+    grid-template-columns: minmax(220px, 0.62fr) minmax(560px, 1.38fr);
     gap: 44px;
   }
 
@@ -961,6 +961,7 @@ textarea:focus {
   .hero-media {
     display: block;
     max-width: min(82vw, 332px);
+    justify-self: center;
   }
 
   .hero-media img {
