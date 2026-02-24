@@ -1,0 +1,104 @@
+/* Global UX overrides: disable legacy page loader and stabilize navigation */
+
+#loftloader-wrapper,
+html.loftloader-pro-hide #loftloader-wrapper {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+.divi-mobile-menu,
+#dm-header,
+#open-button,
+#dm_nav,
+.cd-overlay-nav,
+.cd-overlay-content {
+  display: none !important;
+}
+
+.et-l--header {
+  display: block !important;
+}
+
+body,
+body.show-menu {
+  overflow-x: hidden;
+  overflow-y: auto !important;
+  height: auto !important;
+}
+
+body.dm-custom-header #page-container {
+  padding-top: 0 !important;
+}
+
+.et_pb_row_0_tb_header.et_pb_row--with-menu {
+  align-items: center;
+}
+
+@media (max-width: 1200px) {
+  .et_pb_menu__menu {
+    display: none !important;
+  }
+
+  .et_mobile_nav_menu {
+    display: block !important;
+  }
+
+  .et_pb_menu .et_mobile_nav_menu .mobile_nav {
+    padding: 0;
+  }
+
+  .et_pb_menu .et_mobile_nav_menu .mobile_menu_bar {
+    padding: 0;
+    min-height: 32px;
+  }
+
+  .et_pb_menu .et_mobile_nav_menu .mobile_menu_bar:before {
+    font-size: 34px;
+    color: #1f1f1f;
+    transition: color 0.2s ease;
+  }
+
+  .et_mobile_nav_menu .mobile_nav:hover .mobile_menu_bar:before,
+  .et_mobile_nav_menu .mobile_nav.opened .mobile_menu_bar:before {
+    color: #c9a74b;
+  }
+
+  .et_mobile_menu {
+    right: 0;
+    left: auto !important;
+    width: min(86vw, 360px);
+    border-top: 2px solid #c9a74b !important;
+    border-left: 1px solid rgba(0, 0, 0, 0.12);
+    box-shadow: 0 16px 38px rgba(0, 0, 0, 0.2);
+    border-radius: 0 0 0 14px;
+    padding: 8px 0;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(8px);
+  }
+
+  .et_mobile_menu li a {
+    font-size: 15px !important;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    line-height: 1.35;
+    padding: 12px 20px !important;
+    border-bottom: 0 !important;
+  }
+
+  .et_mobile_menu li a:hover {
+    background: #f6f6f6;
+    color: #111 !important;
+  }
+}
+
+@media (min-width: 1201px) {
+  .et_pb_menu__menu {
+    display: block !important;
+  }
+
+  .et_mobile_nav_menu {
+    display: none !important;
+  }
+}
