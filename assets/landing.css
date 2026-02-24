@@ -39,7 +39,7 @@ body.popup-open {
 }
 
 section[id] {
-  scroll-margin-top: 16px;
+  scroll-margin-top: 31px;
 }
 
 .skip-link {
@@ -307,17 +307,71 @@ body.menu-open .menu-icon::after {
 
 .hero-copy {
   max-width: 620px;
+  padding: 10px 14px 10px 8px;
 }
 
 .lead {
   font-size: 1.1rem;
-  margin: 0 0 20px;
+  margin: 0 0 22px;
 }
 
 .release-note {
-  margin: 0 0 20px;
+  margin: 0 0 22px;
   font-weight: 600;
   color: #333027;
+}
+
+.legal-main {
+  padding: 56px 0 76px;
+}
+
+.legal-shell {
+  width: min(980px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+.legal-article {
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: rgba(250, 249, 246, 0.96);
+  box-shadow: var(--shadow);
+  padding: 34px clamp(18px, 4vw, 44px);
+}
+
+.legal-title {
+  margin: 0 0 12px;
+}
+
+.legal-updated {
+  margin: 0 0 22px;
+  color: var(--muted);
+  font-size: 0.96rem;
+}
+
+.legal-content h3 {
+  margin: 22px 0 10px;
+  font-size: 1.46rem;
+}
+
+.legal-content p,
+.legal-content li {
+  margin: 0 0 11px;
+}
+
+.legal-content ul,
+.legal-content ol {
+  margin: 0 0 16px;
+  padding-left: 22px;
+}
+
+.legal-content a {
+  color: #2d2b27;
+}
+
+.legal-content a:hover,
+.legal-content a:focus-visible {
+  color: var(--accent-deep);
+  outline: none;
 }
 
 .button-row {
@@ -552,6 +606,33 @@ body.menu-open .menu-icon::after {
   border-radius: 8px;
 }
 
+.blocked-embed {
+  width: 100%;
+  min-height: 208px;
+  border: 1px dashed rgba(33, 33, 31, 0.26);
+  border-radius: 10px;
+  background: linear-gradient(140deg, rgba(243, 242, 239, 0.9), rgba(248, 245, 238, 0.9));
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 16px;
+}
+
+.blocked-embed[data-embed-provider="youtube"] {
+  aspect-ratio: 16 / 9;
+}
+
+.blocked-widget {
+  min-height: 190px;
+  aspect-ratio: auto;
+}
+
+.blocked-embed-inner p {
+  margin: 0 0 10px;
+  font-size: 0.98rem;
+  color: #3f3d39;
+}
+
 .video-card p {
   margin: 10px 0 2px;
   font-family: "Barlow Condensed", sans-serif;
@@ -582,6 +663,10 @@ body.menu-open .menu-icon::after {
 
 .tour-widget .bit-widget {
   font-family: "Literata", Georgia, serif;
+}
+
+.tour-widget .bit-widget-container {
+  margin-top: 4px;
 }
 
 .section-press {
@@ -705,6 +790,23 @@ textarea:focus {
   outline: none;
 }
 
+.link-button {
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-transform: uppercase;
+  letter-spacing: inherit;
+  cursor: pointer;
+  padding: 0;
+}
+
+.link-button:hover,
+.link-button:focus-visible {
+  color: #e5c36b;
+  outline: none;
+}
+
 .social-links,
 .legal-links {
   display: flex;
@@ -775,6 +877,84 @@ textarea:focus {
   display: grid;
   gap: 10px;
   margin-top: 14px;
+}
+
+.cmp-banner,
+.cmp-modal {
+  position: fixed;
+  inset: auto 18px 18px 18px;
+  z-index: 165;
+}
+
+.cmp-banner[hidden],
+.cmp-modal[hidden] {
+  display: none;
+}
+
+.cmp-panel,
+.cmp-modal-panel {
+  max-width: 780px;
+  margin: 0 auto;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: rgba(250, 249, 246, 0.97);
+  box-shadow: 0 24px 44px rgba(19, 17, 13, 0.26);
+  padding: 18px 18px 16px;
+}
+
+.cmp-panel h2,
+.cmp-modal-panel h2 {
+  margin-bottom: 10px;
+}
+
+.cmp-panel p {
+  margin: 0 0 12px;
+}
+
+.cmp-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.cmp-modal {
+  inset: 0;
+  background: rgba(18, 16, 12, 0.54);
+  display: grid;
+  place-items: center;
+  padding: 20px;
+}
+
+.cmp-modal-panel {
+  width: min(620px, 100%);
+  position: relative;
+}
+
+.cmp-close {
+  top: 14px;
+  right: 14px;
+}
+
+.cmp-form {
+  display: grid;
+  gap: 12px;
+}
+
+.cmp-row {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px;
+  align-items: start;
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.cmp-row input[type="checkbox"] {
+  margin-top: 4px;
+  width: 17px;
+  height: 17px;
 }
 
 .back-to-top {
@@ -932,6 +1112,10 @@ textarea:focus {
     width: min(var(--maxw), calc(100% - 28px));
   }
 
+  .legal-shell {
+    width: min(980px, calc(100% - 28px));
+  }
+
   .header-inner {
     width: min(var(--maxw), calc(100% - 22px));
   }
@@ -994,6 +1178,20 @@ textarea:focus {
   }
 
   .newsletter-popup {
+    padding: 14px;
+  }
+
+  .blocked-embed-inner .btn {
+    width: 100%;
+  }
+
+  .cmp-banner,
+  .cmp-modal {
+    inset: auto 10px 10px 10px;
+  }
+
+  .cmp-modal {
+    inset: 0;
     padding: 14px;
   }
 }
