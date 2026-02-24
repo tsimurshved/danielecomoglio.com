@@ -301,7 +301,7 @@ body.menu-open .menu-icon::after {
 }
 
 .hero-media {
-  max-width: 520px;
+  max-width: 460px;
   justify-self: center;
 }
 
@@ -905,8 +905,8 @@ textarea:focus {
   }
 
   .hero-grid {
-    grid-template-columns: minmax(300px, 0.9fr) minmax(480px, 1.1fr);
-    gap: 36px;
+    grid-template-columns: minmax(260px, 0.78fr) minmax(520px, 1.22fr);
+    gap: 44px;
   }
 
   .collab-grid {
@@ -949,33 +949,35 @@ textarea:focus {
   }
 
   .hero {
-    padding: 24px 0 40px;
-  }
-
-  .hero::before {
-    opacity: 1;
-    background:
-      linear-gradient(180deg, rgba(28, 26, 22, 0.38) 0%, rgba(28, 26, 22, 0.1) 44%, rgba(243, 242, 239, 0.9) 100%),
-      url("../wp-content/uploads/2020/12/DSC6392-127dp-Copia.jpg") center top / cover no-repeat;
+    padding: 18px 0 28px;
   }
 
   .hero-grid {
-    min-height: min(760px, 88vh);
-    align-content: end;
-    gap: 20px;
+    min-height: auto;
+    align-content: start;
+    gap: 14px;
   }
 
   .hero-media {
-    display: none;
+    display: block;
+    max-width: min(82vw, 332px);
+  }
+
+  .hero-media img {
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    object-position: center top;
+    width: 100%;
+    max-height: 472px;
+    border-radius: 14px;
   }
 
   .hero-copy {
     max-width: none;
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    border: 1px solid var(--border);
     border-radius: 16px;
-    background: rgba(249, 247, 241, 0.82);
-    backdrop-filter: blur(7px);
-    box-shadow: 0 14px 26px rgba(24, 21, 17, 0.14);
+    background: rgba(250, 249, 246, 0.96);
+    box-shadow: var(--shadow);
     padding: 18px 16px;
   }
 
