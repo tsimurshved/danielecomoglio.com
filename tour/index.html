@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Daniele Comoglio</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&family=Abel&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="container header-inner">
+            <a href="../" class="logo">
+                <img src="../site_assets/home/images/Comoglio.jpeg" alt="Daniele Comoglio Logo">
+            </a>
+            <nav class="main-nav">
+                <button class="menu-toggle" aria-label="Toggle navigation">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul class="nav-list">
+                    <li><a href="index.html" class="active">About</a></li>
+                    <li><a href="../tour/index.html">Tour Dates</a></li>
+                    <li><a href="../media/index.html">Media</a></li>
+                    <li><a href="../saxophonerecording/index.html">Saxophone Recording</a></li>
+                    <li><a href="../#contacts">Contacts</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page-content container" style="margin-top: 100px; padding-bottom: 50px;">
+        <h1>About Daniele</h1>
+        <div class="content-block">
+            <p>Content is being migrated...</p>
+            <!-- Content from extracted text will go here -->
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Daniele Comoglio. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function () {
+            document.querySelector('.nav-list').classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>
