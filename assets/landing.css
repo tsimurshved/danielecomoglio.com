@@ -649,6 +649,19 @@ body.menu-open .menu-icon::after {
   align-items: center;
 }
 
+.recording-contact-grid {
+  margin-top: 34px;
+  padding-top: 30px;
+  border-top: 1px solid var(--border);
+}
+
+.recording-contact-grid .stack-form {
+  background: rgba(250, 249, 246, 0.88);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 16px;
+}
+
 .recording-photo img {
   border-radius: 20px;
 }
