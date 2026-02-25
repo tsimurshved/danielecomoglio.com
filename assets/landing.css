@@ -481,7 +481,19 @@ body.menu-open .menu-icon::after {
   border: 1px solid var(--border);
   border-radius: 14px;
   background: var(--surface);
-  padding: 18px;
+  padding: 14px;
+  display: grid;
+  grid-template-columns: 92px minmax(0, 1fr);
+  gap: 14px;
+  align-items: center;
+}
+
+.discography-list article img {
+  width: 92px;
+  height: 92px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 8px 18px rgba(20, 18, 14, 0.16);
 }
 
 .discography-list p {
