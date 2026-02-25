@@ -306,8 +306,106 @@ body.menu-open .menu-icon::after {
 }
 
 .hero-copy {
-  max-width: 620px;
-  padding: 10px 14px 10px 8px;
+  max-width: none;
+  padding: 8px 0;
+}
+
+.hero-copy h1 {
+  margin: 0 0 12px;
+}
+
+.hero-copy .lead {
+  margin: 0 0 14px;
+  max-width: 54ch;
+  font-size: clamp(1.1rem, 1.25vw, 1.38rem);
+  line-height: 1.56;
+  color: #2e2b25;
+}
+
+.hero-copy .release-note {
+  margin: 0 0 16px;
+  font-family: "Barlow Condensed", "Arial Narrow", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: clamp(1.03rem, 1.18vw, 1.25rem);
+  font-weight: 600;
+  color: #343026;
+}
+
+.hero-platforms {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 2px;
+}
+
+.platform-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 42px;
+  padding: 9px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(250, 249, 246, 0.9);
+  text-decoration: none;
+  color: #22201c;
+  font-family: "Barlow Condensed", "Arial Narrow", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  font-size: 0.9rem;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.platform-link:hover,
+.platform-link:focus-visible {
+  transform: translateY(-1px);
+  outline: none;
+}
+
+.platform-icon {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 auto;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.platform-bandcamp .platform-icon,
+.platform-apple .platform-icon {
+  fill: currentColor;
+  stroke: none;
+}
+
+.platform-spotify {
+  border-color: rgba(30, 185, 84, 0.65);
+}
+
+.platform-spotify:hover,
+.platform-spotify:focus-visible {
+  background: rgba(30, 185, 84, 0.14);
+}
+
+.platform-bandcamp {
+  border-color: rgba(99, 157, 176, 0.65);
+}
+
+.platform-bandcamp:hover,
+.platform-bandcamp:focus-visible {
+  background: rgba(99, 157, 176, 0.14);
+}
+
+.platform-apple {
+  border-color: rgba(33, 33, 31, 0.28);
+}
+
+.platform-apple:hover,
+.platform-apple:focus-visible {
+  background: rgba(33, 33, 31, 0.1);
 }
 
 .lead {
@@ -1110,8 +1208,16 @@ textarea:focus {
   }
 
   .hero-grid {
-    grid-template-columns: minmax(220px, 0.62fr) minmax(560px, 1.38fr);
-    gap: 44px;
+    grid-template-columns: minmax(250px, 0.62fr) minmax(680px, 1.38fr);
+    gap: 52px;
+  }
+
+  .hero-copy {
+    padding-right: 22px;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(3.2rem, 5vw, 4.55rem);
   }
 
   .collab-grid {
@@ -1272,6 +1378,7 @@ textarea:focus {
     margin: 0 0 20px;
     font-size: 1.08rem;
     line-height: 1.55;
+    max-width: none;
   }
 
   .hero-copy .release-note {
@@ -1285,6 +1392,26 @@ textarea:focus {
     letter-spacing: 0.04em;
     white-space: nowrap;
     margin: 0 0 12px;
+  }
+
+  .hero-platforms {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .platform-link {
+    justify-content: center;
+    padding: 9px 8px;
+    min-height: 39px;
+    gap: 6px;
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+  }
+
+  .platform-icon {
+    width: 13px;
+    height: 13px;
   }
 
   .footer-grid,
