@@ -1297,13 +1297,31 @@ textarea:focus {
     position: relative;
   }
 
-  .brand {
+  .site-header .brand {
     font-size: 0.98rem;
     letter-spacing: 0.14em;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     margin: 0;
+  }
+
+  .section-recording {
+    padding-bottom: 30px;
+  }
+
+  .section-newsletter {
+    padding-top: 28px;
+    padding-bottom: 34px;
+  }
+
+  .recording-contact-grid {
+    margin-top: 24px;
+    padding-top: 22px;
+  }
+
+  .newsletter-box {
+    padding: 22px 18px;
   }
 
   .menu-toggle {
@@ -1457,11 +1475,35 @@ textarea:focus {
     height: 13px;
   }
 
-  .footer-grid,
+  .footer-grid {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 8px;
+  }
+
+  .site-footer .brand {
+    position: static;
+    left: auto;
+    transform: none;
+    display: inline-block;
+    margin: 0 auto 2px;
+    text-align: center;
+    font-size: 0.95rem;
+    letter-spacing: 0.13em;
+  }
+
   .social-links,
   .legal-links {
     justify-content: center;
     text-align: center;
+    gap: 6px 12px;
+    font-size: 0.76rem;
+    line-height: 1.35;
+  }
+
+  .footer-note {
+    margin-top: 6px;
+    font-size: 0.74rem;
   }
 
   .newsletter-popup {
