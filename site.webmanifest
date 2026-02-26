@@ -1,0 +1,22 @@
+{
+  "name": "Daniele Comoglio",
+  "short_name": "D. Comoglio",
+  "description": "Official website of Daniele Comoglio, Italian saxophonist, session player and composer.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f3f2ef",
+  "theme_color": "#f3f2ef",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
