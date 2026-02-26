@@ -1223,24 +1223,28 @@ textarea:focus {
   }
 
   .hero-grid {
-    grid-template-columns: minmax(320px, 0.66fr) minmax(760px, 1.34fr);
-    gap: 52px;
+    grid-template-columns: minmax(280px, 0.56fr) minmax(780px, 1.44fr);
+    gap: 56px;
   }
 
   .hero-media {
-    max-width: 430px;
+    max-width: 387px;
   }
 
   .hero-copy {
     padding-right: 0;
     display: grid;
-    grid-template-columns: minmax(0, 1.25fr) minmax(250px, 0.75fr);
-    column-gap: 30px;
-    align-items: end;
+    grid-template-columns: minmax(0, 1.72fr) minmax(250px, 0.62fr);
+    column-gap: 36px;
+    align-items: center;
   }
 
   .hero-copy h1 {
-    font-size: clamp(3.2rem, 5vw, 4.55rem);
+    font-size: clamp(2.95rem, 4.2vw, 4.05rem);
+    line-height: 1;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+    margin: 0 0 14px;
   }
 
   .hero-copy .lead,
@@ -1248,15 +1252,26 @@ textarea:focus {
     max-width: none;
   }
 
+  .hero-copy .lead {
+    font-size: clamp(1.1rem, 1.22vw, 1.45rem);
+    line-height: 1.5;
+  }
+
+  .hero-copy-cta {
+    align-self: center;
+  }
+
   .hero-copy-cta .release-note {
-    margin: 0 0 14px;
+    margin: 0 0 16px;
+    max-width: 20ch;
+    line-height: 1.32;
   }
 
   .hero-platforms {
     display: grid;
     grid-template-columns: 1fr;
     width: 100%;
-    gap: 10px;
+    gap: 11px;
     margin-top: 0;
   }
 
