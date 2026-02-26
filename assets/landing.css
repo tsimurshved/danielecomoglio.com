@@ -21,7 +21,6 @@
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 
 body {
@@ -33,7 +32,6 @@ body {
     radial-gradient(circle at 95% 0%, rgba(60, 60, 56, 0.05) 0, transparent 24%),
     var(--bg);
   line-height: 1.6;
-  overflow-x: hidden;
 }
 
 body.menu-open,
@@ -1141,10 +1139,14 @@ textarea:focus {
   display: grid;
   place-items: center;
   border: 0;
-  border-radius: 0;
-  background: transparent;
-  color: #25231e;
+  border-radius: 999px;
+  background: rgba(252, 251, 246, 0.9);
+  box-shadow: 0 10px 22px rgba(18, 16, 12, 0.22);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  color: #1b1a17;
   font-size: 1.22rem;
+  font-weight: 700;
   line-height: 1;
 }
 
@@ -1424,7 +1426,7 @@ textarea:focus {
     margin: 0;
     justify-self: stretch;
     position: relative;
-    top: 0;
+    top: var(--mobile-header-h);
     position: sticky;
     z-index: 0;
     overflow: hidden;
@@ -1454,6 +1456,8 @@ textarea:focus {
     max-height: none;
     height: clamp(360px, 58vh, 500px);
     border-radius: 0;
+    transform: scale(1.07);
+    transform-origin: center 16%;
   }
 
   .hero-copy {
